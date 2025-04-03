@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="helpPage.css">
+<link rel="shortcut icon" href="favicon.png" />
+<title>Mega Man X Online: Deathmatch Help</title>
+</head>
+<body class="container">
+
+<div id="logo-wrapper">
+  <a href="index.html"><img id="logo" src="logo.png?v=1.0.2" /></a>
+</div>
+
+<div style="text-align: center">
+  <button onclick="location.href='help.html'" type="button" style="display:inline-block;">Help Guide</button>
+  <button onclick="location.href='characters.html'" type="button" style="display:inline-block;">Characters</button>
+  <button onclick="location.href='changelog.html'" type="button" style="display:inline-block;">Change Log</button>
+  <button onclick="location.href='tools.html'" type="button" style="display:inline-block;">Tools</button>
+  <button onclick="location.href='bonuses.html'" type="button" style="display:inline-block;">Bonuses</button>
+  <button onclick="location.href='credits.html'" type="button" style="display:inline-block;">Credits</button>
+</div>
+
+<h1>Help Page</h1>
+
+<p>Welcome to Mega Man X Online: Deathmatch! (Often abbreviated as MMXOD.) This page gives a comprehensive guide on how to play the game, configure settings, and useful hints/tips to let you pick up your game and kick some reploid butt!</p>
+
+<h2 id="windows">Installation and updating (Windows)</h2>
+
+<p>To install for the first time, download the game from the main page of this website in the Windows download section. (Tip: click the game logo at the top of the website to quickly return to the home page from any other page.) Windows 10 is recommended. Windows 7 and 8 is somewhat supported but may not work for some users. Unzip the downloaded file and open the MMX.exe file in the folder that gets unzipped to launch the game.</p>
+
+<p>On first launch, you'll be asked if you want to create a folder called "MMXOD" in your "Documents" folder on first launch (Windows only). If you select "Yes", the game will use this folder instead of the game exe folder for settings, controls, crash dumps, report files, etc. Select "Yes" if you want to preserve your settings and control configs on updates.</p>
+
+<p>To update the game if there's a new version, simply redownload the game again. If you selected "No" at the prompt above (or if some error occurs when trying to create the MMXOD folder, such as lack of write access or no documents folder on your computer), you'll have to transfer your settings and controls manually to the new version. To do so, copy these files from your old game version folder to your new game version folder:
+  <ul>
+    <li>options.txt</li>
+    <li>controls.txt</li>
+  </ul>
+</p>
+
+<p>For mod users, you can even copy over the assets folder here as well; if the assets folder exists in this location it would read it here instead of from the game folder. This can be useful for mods, though if the assets change in an update, you'll need to copy over those changes and update your mod if it is incompatible with the new changes.</p>
+
+<h2 id="windows">Advanced Users Windows Downloads</h2>
+
+<p>If you want a smaller download size, you can download the non-SC version of the app. SC (self contained) versions mean that they should run out of the box, without having to install anything first like .NET 5, so they are more convenient to install. However, this means the download and game size is larger.</p>
+
+<p>For the non-SC versions, you'll need to download and install .NET 5 if you don't already have it installed. You can download it here: <a href="https://dotnet.microsoft.com/download/dotnet/5.0/runtime">https://dotnet.microsoft.com/download/dotnet/5.0/runtime<a>. On this webpage, under the "Run desktop apps" option on the Windows tab, choose "Download x64", "Download x86" or "Download Arm64" depending on your CPU architecture (typically x64 for newer machines on 64-bit Intel processors). Once you've downloaded and installed .NET 5, you won't need to do so again, even if downloading new non-SC versions of the game. Make sure the CPU architecture of .NET 5 you download matches the version of the game.</p>
+
+<p>Also keep in mind that the Windows advanced download options are not bundled with the assets folder. You'll have to download the assets folder from the advanced download options as well, and extract that folder into the main game folder.</p>
+
+<h2 id="mac">Installation and updating (Mac)</h2>
+
+<p>To install for the first time, download the game from the main page of this website in the Mac download section. Note that you must have a 64 bit version of Mac OS. Too old Mac OS versions may not work. Once downloaded, extract the app file somewhere, then move it to the Applications folder, before running it. If you don't move it to the Applications folder, you won't be able to save your settings.</p>
+
+<p>To update, re-download the new version of the game and move it to the Applications folder (you can delete the old versions if you'd like to clean up space.)</p>
+
+<p>If you get a warning that says that the file is not from a trusted publisher, then to get around this warning, hit cancel, go into Security & Privacy settings, and in the General tab, allow the app.</p>
+
+<p>The options.txt, controls.txt and crash logs can be found by right clicking the app file, "Show Package Contents", and navigate to Contents/MacOS folder. There is a lot of stuff in this folder so I recommend you do a search in this folder or sort by the type to easily find what you need. You can move over the options.txt and controls.txt into new versions to preserve your settings.</p>
+
+<p>The Mac version does not have any popups or prompts unlike the Windows version.</p>
+
+<h2 id="linux">Installation and updating (Linux)</h2>
+
+<p>To install and run the Linux version, you must have a 64 bit version of Linux. Only Debian-based Linux distributions (i.e. Ubuntu) are supported, and old versions may not work.</p>
+
+<p>To install for the first time, download the game from the main page of this website in the Linux download section. You also need to download the assets bundle ("Assets folder only" link on homepage). Once downloaded, extract the main game download folder somewhere, and also the assets folder, and put the assets folder in the main game folder.</p>
+
+<p>Then, open a terminal window in the game folder and run "chmod 777 ./MMX" followed by "./MMX" to launch the game.</p>
+
+<p>Note that the game requires OpenAL installed (this is a sound library). If you do not already have it installed, you will get an error message like "Unable to load shared library 'csfml-audio'". To install it on your system, run "sudo apt-get install libopenal1".</p>
+
+<p>Also keep in mind that the Linux game download is not bundled with the assets folder. You'll have to download the assets folder from the advanced download options as well, and extract that folder into the main game folder.</p>
+
+<p>To update, re-download the new version of the game. You'll need to run the chmod step again on the new version but you should not need to install OpenAL again. You can copy over controls.txt and options.txt into new versions to preserve your settings.</p>
+
+<p>The Linux version has a few minor differences from the Windows version. There are no popups or prompts. Error messages instead will be reported to the terminal if the game crashes. All "yes/no" prompts will automatically be selected as "yes".</p>
+
+<h2>Game Overview</h2>
+
+<!--<p>On first launch of the game, you'll be prompted to enter a multiplayer name, and a region. It's best to select the region closest to you. Note that no account is required, you just choose a name and hop right in!</p>-->
+
+<p>In the eponymous Deathmatch mode, the object of the game is to be the first with the most kills, up to a certain amount. If you die, you will respawn in 5 seconds. You can play as one of five characters: Mega Man X, Zero, Vile, Axl or Sigma. You earn "scrap" on each kill, a currency used to upgrade your character or activate special attacks or "hyper mode" forms in a match. Your current scrap count is next to a little gear icon under your health bar in the HUD.
+
+<p>In addition there are other game modes available below:
+
+<ul>
+<li>Team Deathmatch: Deathmatch with teams; first team whose total kills reaches the kill limit wins.</li>
+<li>Capture the Flag: the first team that captures the other team's flag a certain amount of times wins.</li>
+<li>Control Point: Blue team must capture 2 control points on the map before time runs out, while Red team tries to stop them.</li>
+<li>King of the Hill: Blue and Red teams both try to capture a "hill" in the center of the map. It must be initially captured by a team and then held for 3 minutes to win.</li>
+<li>Elimination/Team Elimination, you only get a set amount of lives, and the last person (or team for Team Elim) standing wins; for medium and large maps there's a "Sigma Virus" similar to the storm in Battle Royale games that eventually shrinks the map down to a small area to prevent indefinite camping.</li>
+<li> Finally, in Race, the goal is to get from the spawn point to the finish line first. Some race maps in the Custom Map pool have Ride Chasers which makes it a bike race. Team Race is not supported, this is a FFA only mode.</li>
+</ul>
+
+<p>Press the scoreboard button (default TAB) in a match to check the score and what the match is playing to.</p>
+
+<h2>Online Play</h2>
+
+<p>From the main menu, you can play online multiplayer by either joining or creating an online match. You can also play offline with bots only. Local (i.e. split screen / shared screen) multiplayer is not supported; all multiplayer must be done online or via LAN play (LAN requires the Relay Server, downloadable from the tools section of the site.)</p>
+
+<p>When creating or hosting a match you will need specify either Internet or LAN to play with others over the internet or on your local network, respectively.</p>
+
+<p>Note that as of May 28th, 2023, the official servers have been shut down. This means that to play online matches over the internet, you must connect to a self-hosted server that you (or someone else in your community) sets up, pays for, and manages independently. To connect to said server via the "internet" option in join or create match, you'll need to edit the "region.txt" file that is autogenerated in your game folder (or MMXOD documents folder, if you are using that) on game launch with the ip address of that self hosted server, along with a display name for that server (max 8 chars for the name). For more information, see the following help pages:</p>
+
+<ul>
+  <li><a href="decom.html">Decom guide: a high level guide of ways to keep playing online after the May 28th official server shutdown date</a></li>
+  <li><a href="relayserver_help.html">Relay Server Help: how to use the Relay Server to host a multiplayer server</a></li>
+</ul>
+
+<p>To get LAN to work, follow the Relay Server Help guide mentioned above. (requires downloading an additional program, the "Relay Server", from the Tools section of the website)</p>
+
+<h2>Host Match</h2>
+
+<p>To host a match, follow these steps:<p>
+<ol>
+<li>Choose "Create Match" in the main menu and select Internet or LAN. The match name will be autogenerated and you can change it by using left/right (although this just autogenerates another random name, you can't type it in manually).</li>
+<li>Choose the other settings (map size, map, mode, etc).
+  <ul>
+    <li>Depending on the map size you choose, a different pool of maps will be available.</li>
+    <li>If you only have a few other players or one other player, it's suggested to play on the smaller map sizes, or add bots.</li>
+    <li>You can enable Private Match to make your game not show up in the Join Menu listing to the public. Others will have to manually join in that menu by pressing Menu Secondary button and then type in your match name.</li>
+  </ul>
+</li>
+<li>Continue to the next screen. You are now on the "Wating for players" menu, and your match is created, and now others can join it by choosing "Join Match" in the main menu.</li>
+<li>Once all desired players have joined, you can now press the continue button to start the match. Note that others can join the match later even after it's started.</li>
+</ol>
+
+<p>In the Waiting for Players menu, for team modes, you can use the left/right keys to toggle players' team assignment, based on their player id number.</p>
+
+<p>Note that the host of a match is just another player like the others and still participates in the match with no difference from other players. If the host leaves or disconnects, a new host is promoted in their stead.</p>
+
+<p>If you set the map size of "small", there are several important differences in gameplay. "small" maps are essentially for 1v1 or for up to 4 players in a mode that is more Super Smash Bros or fighting-game like. Here are the differences in "small" map matches:</p>
+
+<ul>
+  <li>X has to choose between X1, X2 or X3 armors, and his loadout is not respected, instead being given all weapons corresponding to the armor set chosen. For example the X1 armor gives all X1 weapons, the X2 armor gives all X2 weapons, etc.</li>
+  <li>Axl gets all guns except craftable ones and cannot craft/upgrade his Axl Bullet weapon.</li>
+  <li>Sigma has to choose between his X1, X2 or X3 form, and his loadout is not respected, instead being given all Mavericks corresponding to the armor set chosen. For example, X1 sigma gets all X1 Mavericks, etc. The command mode is always Striker.</li>
+  <li>You can play directly as Mavericks, without having to summon them as Sigma first, by selecting them in the Character Select menu before creating/joining the small map match.</li>
+  <li>Hyper Modes are not available. (Unless "Hyper Mode 1v1" option is chosen in custom match settings.)</li>
+  <li>Elimination and Team Elimination are the only game mode options.</li>
+</ul>
+
+<p>If you press the MENU SECONDARY button (default SPACE on keyboard) on some of the host menu options you can configure them further. For example for "CPU Count", you can configure the actual CPU characters and their team. For "Custom Settings" you can tweak some additional match settings to your liking, for example "Hyper Mode 1v1" makes all characters spawn in their hyper forms (though these options may be buggy and less tested). You can experiment and create interesting and unique CPU challenges. Note, the last match settings are preserved if you close the menu or the game and re-open.</p>
+
+<p>If you change the map pool to Custom, it will load custom maps in your assets\maps_custom folder in the game (or MMXOD documents) folder. By default the game comes bundled with several custom maps, but you create your own custom maps using the guide <a href="mapeditor_help.html">here</a>, or download ones provided by your MMXOD community, and move the custom map folder into your assets\maps_custom folder to have the game read them on launch and make them available for selection in the custom map pool.</p>
+
+<p>For online/LAN matches, you can specify how the netcode deals with lag to either "favor the attacker" or "favor the defender". "Favor the attacker" (FTA) means your attacks will connect if they hit on your screen. "Favor the defender" (FTD) means your attacks will connect if they hit on your opponent's screen. The FTA option has a associated configurable ping value. Any users above this ping will experience FTD. This ping setting can be used to offset the advantage a laggy player might have, otherwise their attacks could appear to connect from absurdly far away. The max option for this ping is 500. In small maps, FTD is the default option, otherwise it is FTA < 200 ping (i.e. favor the attacker for a player if their ping is less than 200, otherwise favor the defender.)</p>
+
+<h2>Join Match</h2>
+
+<p>To join a match, choose "Join Match" and select Internet or LAN, then select the match name you wish to join. Choose character and weapons. You'll then wait for the host to start their match if it isn't already started.</p>
+
+<p>Once in a match, you can leave any time and even rejoin. If the host leaves, a random player gets promoted to host. If all players leave, the match is aborted and removed by the game.</p>
+
+<p>When a match ends, the host will have the option to quit the match, or create a new match on the same or different map. If the current host leaves at any time, they will be replaced with a new one.</p>
+
+<!--
+<h4>A Note on Ping and Region</h4>
+
+<p>Your ping in a match determines the quality of online play. Press the scoreboard button (default TAB on keyboard) to check your ping in a match. Ideally a ping of under 100 is best (the closer to 0 the better), or else hits on enemies as well as their movement will appear very laggy and delayed. </p>
+<p>Your region determines where games you host will be created. Currently there are only 3 regions: East US, West US and Brazil. Change your region to the closest region in the settings if it isn't already so that future matches you host have the lowest latency. Join matches in your region for the lowest latency. Note that if you are far away from your opponent, you will also notice their latency, even if you are close to the region.</p>
+
+<p><i>Note: you can play with others in different regions. However, players that are far apart with different preferred regions will encounter higher amounts of latency and a less smooth experience.</i></p>
+-->
+
+<h2>Offline</h2>
+
+<p>To play offline against bots, choose the "vs. CPU" option on the main menu, and configure the map settings and your character/weapons. This is the easiest way to get started with MMXOD gameplay now that the official servers have been shut down. The match settings are nearly identical to hosting an online/LAN match, with a few sections related to netcode not shown.</p>
+
+<h2>Configuration</h2>
+
+<h3>Loadout</h3>
+<p>Each character has their own loadout that works in their own unique way. You can change your loadout in a match or in the main menu. Loadout determines things like what weapons are in your hotbar (for X, Vile and Axl), what techniques you can input (for Zero and Vile) and what Mavericks you can summon (for Sigma).</p>
+
+<h3>Controls</h3>
+<p>You can change your keyboard controls in the main menu. You can also use a USB controller and change the controls for that. Plug in the controller before launching the game to have the game detect it. Then change the control bindings in the Controls menu.</p>
+<p>Each character can have their own control binding. Press left or right in the controls menu to select the appropriate character binding. In addition, some characters have unique bindings, especially Axl and Sigma.</p>
+
+<h3>Settings</h3>
+<p>You can change various settings in the main menu, such as sound and music volume, fullscreen options, default windowed resolution, multiplayer name, and more. Some graphical options require restarting the game to take effect. There are also settings specific to certain characters.</p>
+
+<h2>General Tips/Information</h2>
+
+<ul>
+<li>If you want to easily experiment with all character abilities, you can create a "training" match in the vs. cpu menu by changing the match size to small and selecting "training" as the map (press LEFT on the first small map option, i.e. Central Computer 1v1 and you'll quickly get to it; make sure you are in the official map pool.) Training has the following changes:
+  <ul>
+    <li>Respawn time reduced to 2 seconds.</li>
+    <li>Computer can be toggled via F12 to alternate between attack, jump, fight and idle modes.</li>
+    <li>For X, Axl and Sigma, all weapon options are available in the hotbar (unless you set "USE LOADOUT" to Yes in the vs. cpu menu to create the match).</li>
+    <li>9999 scrap is available from the get-go for ease of testing abilities.</li>
+    <li>The DPS (damage per second) of attacks is recorded when you attack and kill the CPU. Note, it factors in delays so be sure to launch your attacks as fast as possible to get an accurate understanding of the DPS of a particular move.</li>
+  </ul>
+</li>
+<li>By pressing F12 in a non-training map, you can have your character be taken over by a bot. This works in both Online and Offline modes, so you can use it if you need to go AFK, or even as a way to add extra AI controlled players to an online match.</li>
+<li>Pay attention to the in-game tips that show up when you die and respawn. They are often targeted to the character you are playing as and provide useful information you might not know about.</li>
+<li>Any character can purchase Heart Tanks and Sub Tanks in the upgrade menu in a match, if the option is turned on for the match. These cost scrap but are useful investments to make your character more powerful in a match.
+  <ul>
+    <li>Heart Tanks simply upgrade your life by 1 per tank purchased for 2 scrap (at the default settings).</li>
+    <li>If you purchase Sub Tanks, they will fill up with energy on each kill or if you pick up health capsules. If alive and at less than full health, you can use a sub tank in the menu if it has energy to recover some of your HP. Each sub tank can hold a max of 16 HP. Note that sub tanks cannot be used shortly after dealing or taking damage. Some hyper modes and invulnerability granting moves prevent you from using sub tanks as well in their duration.</li>
+  </ul>
+</li>
+<li>In addition, some characters have character-specific ways to upgrade over time in a match. For example X and Vile can upgrade armors. Axl can craft new primary weapons and replace his default Axl Bullet with these improved firearms.</li>
+</ul>
+
+<h2>Further reading</h2>
+
+<p>Start with the character guide to understand how the 5 characters work and each of their character-specific abilities, loadouts, upgrade options, special abilities, hyper modes, etc:</p>
+<a href="characters.html">Character Guide</a><br>
+<p>This is also available on the website's top menu bar, along with a few other pages you can visit for more information on advanced options like tools, modding, change log of the game, etc. In particular, the change log for a particular update, particularly major updates, might have more detailed information not covered in detail in the general guides (but may have outdated info corrected in later change logs).</p>
+<p>You can also read the <a href="faq.html">FAQ</a> which might answer any questions you may have.</p>
+
+<br>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="gamePage.css?v=1.0.6">
+<link rel="stylesheet" href="helpPage.css?v=1.0.3">
+<link rel="shortcut icon" href="favicon.png" />
+<title>Mega Man X Online: Deathmatch</title>
+
+</head>
+
+<style>
+
+table {
+  width:1000px;
+  margin: auto;
+  text-align: center;
+}
+
+table, td {
+  width: 400px;
+  border: 1px solid white;
+}
+
+table img {
+  width: 600px;
+}
+
+h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+hr {
+ margin-top: 10px;
+  margin-bottom: 10px; 
+}
+
+#non-windows {
+  width: 100%;
+  border: none;
+}
+
+#non-windows td {
+  border: none;
+}
+
+#mac {
+}
+
+</style>
+
+<body class="container">
+
+<script>
+  function showAVMessage() {
+    var targetEl = document.getElementById("avMessage");
+    targetEl.style.display = (targetEl.style.display === "block" ? "none" : "block"); 
+  }
+</script>    
+
+<div id="logo-wrapper">
+  <img id="logo" src="logo.png" />
+</div>
+
+<div style="text-align: center">
+  <button onclick="location.href='help.html'" type="button" style="display:inline-block;">Help Guide</button>
+  <button onclick="location.href='characters.html'" type="button" style="display:inline-block;">Characters</button>
+  <button onclick="location.href='changelog.html'" type="button" style="display:inline-block;">Change Log</button>
+  <button onclick="location.href='tools.html'" type="button" style="display:inline-block;">Tools</button>
+  <button onclick="location.href='bonuses.html'" type="button" style="display:inline-block;">Bonuses</button>
+  <button onclick="location.href='credits.html'" type="button" style="display:inline-block;">Credits</button>
+</div>
+
+<h2 style="text-align:center;margin-top:15px;margin-bottom:15px;">Mega Man X Online: Deathmatch is a Mega Man X Multiplayer Fan Game.</h2>
+
+<div style="width:640px;margin:auto">
+  <iframe width="640" height="482" src="https://www.youtube.com/embed/zT0dEXow1Uo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<h3 style="text-align:center">Battle online against other players in action-packed multiplayer matches, using characters, weapons and abilities from the Mega Man X series!</h3>
+
+<hr style="background:white">
+
+<p style="text-align:center;"><em>! NOTICE !</em><br><i>The official servers have been shut down as of May 28th, 2023. Online play now requires self-hosted servers. The game is no longer developed or supported.<br>See the <a href="decom.html">Decommission Guide</a> for high level guidance on managing your own servers.</i></p>
+
+<hr style="background:white">
+
+<h2 style="text-align:center">Download links (Windows)</h2>
+
+<div style="text-align: center">
+  <button style="display:inline-block" onclick="location.href='https://github.com/gamemaker19/MMXOnline/releases/download/v19.12/MMXOnlineV19_12_win_x86_sc.zip'">⊞ Download (v19.14)</button>
+</div>
+
+<div style="text-align: center;"><i>See the <a href='help.html#windows'>help</a> page for more help on Windows installation.</i></div>
+
+  <div style="text-align:center"><i><a href="javascript:showAVMessage()">Having anti-virus issues?</a></i></div>
+  <div id="avMessage" style="display:none">
+    <p><i><small>Some people have reported that the main Windows download is flagged as malware by Windows Defender or other anti-virus programs. However, there is a large community that plays the game and there is no evidence of any malware being present. Either allow the exe in your anti-virus settings, or try downloading the other Windows versions below (windows 64 bit or non-self contained versions) which are less likely to be flagged as a false positive.</i></small></p>
+    <p><i><small>If you have a Mac or Linux installed, download the Mac or Linux versions as they are virtually guaranteed not to have any virus flagging issues since Mac and Linux lack viruses and generally don't use or need an anti-virus.</i></small></p>
+    <p><i><small>Alternatively, you can just build the game from source yourself which may eliminate the warnings. Source code can be found here: <a href="https://github.com/gamemaker19/MMX-Online-Deathmatch">https://github.com/gamemaker19/MMX-Online-Deathmatch</a>.</i></small></p>
+  </div>
+
+<hr style="background:white">
+
+<!--<p style="text-align: center;"><i>Note: the Mac and Linux versions will be updated soon, so stay tuned!</i></p>-->
+
+<table id="non-windows">
+  <tr>
+    <td style="padding-left: 75px">
+      <h2 style="text-align:center">Download links (Mac)</h2>
+
+      <div style="text-align: center">
+        <button style="display:inline-block" onclick="location.href='https://github.com/gamemaker19/MMXOnline/releases/download/v19.12/MMXOnlineV19_12.app.zip'">🍎 Download (v19.14)</button>
+      </div>
+
+      <div style="text-align: center;"><i>See the <a href='help.html#mac'>help</a> page for more help on Mac installation.</i></div>
+    </td>
+    <td style="padding-right: 75px">
+      <h2 style="text-align:center">Download links (Linux)</h2>
+
+      <div style="text-align: center">
+        <button style="display:inline-block" onclick="location.href='https://github.com/gamemaker19/MMXOnline/releases/download/v19.12/MMXOnlineV19_12_debian_x64_sc.zip'">🐧 Download (v19.14)</button>
+      </div>
+
+      <div style="text-align: center;"><i>See the <a href='help.html#linux'>help</a> page for more help on Linux installation.</i></div>
+    </td>
+  </tr>
+</table>
+
+<hr style="background:white">
+
+<h2 style="text-align:center">Help and Resources</h2>
+
+<div style="text-align: center">
+  <button style="display:inline-block" onclick="location.href='help.html">Help Guide</button>
+</div>
+
+<hr style="background:white;">
+
+<h2 style="text-align:center">Additional downloads (advanced users only)</h2>
+
+<div style="text-align: center;">
+  <a href="https://github.com/gamemaker19/MMXOnline/releases/download/v19.12/MMXOnlineV19_12_win_x86.zip">Windows x86 non-SC (v19.14)</a><br/>
+  <a href="https://github.com/gamemaker19/MMXOnline/releases/download/v19.12/MMXOnlineV19_12_win_x64.zip">Windows x64 non-SC (v19.14)</a><br/>
+  <a href="https://github.com/gamemaker19/MMXOnline/releases/download/v19.12/MMXOnlineV19_12_win_x64_sc.zip">Windows x64 SC (v19.14)</a><br/>
+  <a href="https://github.com/gamemaker19/MMXOnline/releases/download/v19.12/assets.zip">Assets folder only (v19.14)</a>
+</div>
+
+<hr style="background:white">
+
+<div style="text-align: center;margin-top:15px">
+  
+</div>
+
+<p style="text-align: center"><small><i>Not affiliated with Capcom in any way. All credit goes to Capcom for resources and IP used in the project.<br>Source code available on github at <a href="https://github.com/gamemaker19/MMX-Online-Deathmatch">https://github.com/gamemaker19/MMX-Online-Deathmatch</a>.</i></small></p>
+
+</body>
+</html>
