@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="helpPage.css?v=1.0.3">
+<link rel="shortcut icon" href="favicon.png?v=1.0.2" />
+<title>MMXOD Relay Server Help</title>
+
+<style>
+  td {
+    padding: 5px;
+  }
+</style>
+
+</head>
+<body class="container">
+
+<div id="logo-wrapper">
+  <a href="index.html"><img id="logo" src="logo.png?v=1.0.2" /></a>
+</div>
+
+<div style="text-align: center">
+  <button onclick="location.href='help.html'" type="button" style="display:inline-block;">Help Guide</button>
+  <button onclick="location.href='characters.html'" type="button" style="display:inline-block;">Characters</button>
+  <button onclick="location.href='changelog.html'" type="button" style="display:inline-block;">Change Log</button>
+  <button onclick="location.href='tools.html'" type="button" style="display:inline-block;">Tools</button>
+  <button onclick="location.href='bonuses.html'" type="button" style="display:inline-block;">Bonuses</button>
+  <button onclick="location.href='credits.html'" type="button" style="display:inline-block;">Credits</button>
+</div>
+
+
+<h1>MMXOD Relay Server Help</h1>
+
+<p>If you are interested in hosting LAN matches or self-hosted servers, this detailed guide will explain how the Relay Server works, how to host your own servers, and more.</p>
+
+<p>You can also consult the <a href="decom.html">Decommission Guide</a> for a high level overview of methods to use this tool to play online without requiring the offical servers, which have been taken down and decomissioned.</p>
+
+<p>Before following this guide make sure you have downloaded version 19.12 of the game and Relay Server as that is the last version after the server shutdown.</p>
+
+<h2 id="windows">Installation/Getting Started</h2>
+
+<p>Download the program from the Tools section of the site. Choose the right version for your needs. Like with the main game, you can download self-contained versions (easiest to set up as they run out of the box without requiring .NET 5 installed, but have a larger download size) and choose between 32 bit or 64 bit depending on your OS. However, Mac and Linux Relay Server downloads are currently not available.</p>
+
+<p>This program is a command-line utility. However, it accepts no input and is extremely simple: just open it and leave it running. If the firewall prompt comes up, enable it for private networks (may need to do it for public networks if on VPN). That's all you need to do, and now people can connect to your server.</p>
+
+<h2>LAN</h2>
+
+<p>To host a LAN match, first run RelayServer.exe in the unzipped folder (NOT the MMX.exe file, this should be ignored and is to never be opened, you still use your main MMXOD game download for running the actual game). Then open MMXOD and create a match, choosing the "LAN" option before entering the Host Server menu. Players on your private network can then attempt to look up the LAN matches you create if they choose the "LAN" option before entering the Join Server menu. It will automatically search PCs on your LAN for ones running the MMXOD Relay Server.</p>
+<p>Note that the automatic LAN match lookup may not always find matches hosted in your LAN. This could be the case if hosting a LAN match on a VPN or a large business-class internal network (as opposed to a typical private home network in the 192.168.1.* range). If no results show up even if someone hosted a match, the others will need to directly connect by IP address by pressing ESCAPE in the Join Menu. They should type in the IP address of the host. This IP can be found in the host's "Waiting for Players" screen, under the match name (or if the match already started, in the scoreboard in the top-right).</p>
+<p>Once a player has submitted the host's IP, the Join Match menu should now find and show the match that the host created, which you can then join.</p>
+<p>If connecting by direct IP is still not working, try these troubleshooting steps:</p>
+<ul>
+  <li>Ensure that everyone's firewall is set to allow the game and relay server exes.</li>
+  <li>Make sure your LAN and the devices connected to it are configured properly and are allowed to communicate with one another. Usually you can run the <code>ping</code> command on Windows to validate this, but this is OS-dependent and is a complex subject.</li>
+  <li>If for some reason the IP address is missing in the host's match UI, or then one listed does not work, try having the host manually get their IP address by running the <code>ipconfig</code> command in Windows Command Prompt. Use the one on the right network adapter (usually Ethernet or Wi-Fi) that is labeled "IPv4 Address" or similar. If this doesn't work either, then depending on your specific VPN or network configuration, you may need to use another IP address (answers will vary depending on exact VPN vendor or network setup).</li>
+  <li>Ensure anti-viruses aren't blocking the MMXOD network communications.</li>
+  <li>Make sure the Relay Server is still running and hasn't crashed or ran into a fatal error.</li>
+</ul>
+<p>There are generally two ways to use LAN. You can use it to play with people that are on the same physical network as you (i.e. people in the same building, house, etc). This is the simplest and easiest option and should not require any special tools or knowledge outside the Relay Server. Another use of LAN is to play with people over a VPN (Virtual Private Network) on the internet. This allows you to play with others online without needing a self-hosted server, but requires everyone to download a VPN software like Hamachi and set up/connect to a network in it.</p>
+<p>Unfortunately this is a complex subject and troubleshooting often requires someone familiar with computer networking, since there could be many settings that need to be adjusted for everything to work properly. The late Jape has created a good tutorial on hosting a Smash Crusade match over Radmin VPN (the basic networking principles should also apply to MMXOD, and other VPNs, i.e. Hamachi): <a href="https://www.youtube.com/watch?v=NaMztavlQxk&t=1s">https://www.youtube.com/watch?v=NaMztavlQxk&t=1s</a></p>
+<p>If connecting to a VPN network with others on the internet please be aware of the security risks. Make sure your operating system and programs are up-to-date. Only join VPN networks run by people you trust, and only allow people in your VPN you trust. The smaller the group of people you share the VPN network with, the more secure.</p>
+
+<h2>Custom Internet Server</h2>
+
+<p>To host a public MMXOD server (also known as a "Region" in the in-game menu jargon) on the internet, you'll need a Windows 64-bit server with a public ip address. It'll need to meet certain minimum requirements: too weak or low bandwidth servers may struggle with running the Relay Server, especially with multiple concurrent matches. Simply download the Relay Server and run it on your server. Make sure you enable TCP and UDP ports 14242-14342 (this gives 100 ports/concurrent matches, go over 14342 if you need more).</p>
+<p>As long as the exe is running, people will be able to connect to your server if they have a region.txt in the game folder with an entry that points to your public server ip. Here is the region.txt format (it is JSON):</p>
+<pre style="color:white">
+{
+  "name": "YOUR_REGION_NAME",
+  "ip": "YOUR_SERVER_IP"
+}
+</pre>
+<p>Replace YOUR_SERVER_IP with the public ipv4 address of the server running MMXOD you wish to connect to. YOUR_REGION_NAME can be anything and will be what the region will show up as in the game menus, but must not be blank and will be truncated to 8 characters max if longer.</p>
+
+<p>Troubleshooting:</p>
+<ul>
+  <li>Verify your server IP is connectable to anyone on the internet (i.e. try pinging it with <code>ping</code> command).</li>
+  <li>Ensure no firewall or anti-virus is blocking the ports mentioned above (both server and client side).</li>
+  <li>Make sure the Relay Server is still running and hasn't crashed or ran into a fatal error.</li>
+</ul>
+
+<p>Here is a quick start guide if you want to host on Azure, which is what the official servers ran on: <a href="azure_server_help.html">Azure Server Help</a></p>
+
+<h2>Updating</h2>
+
+<p>Every update changelog should now indicate if a new Relay Server version must be downloaded. If so, you'll need download the update and run it on the server for clients on the new version to connect and create/join matches.</p>
+<p>If an update comes that does not require a new Relay Server version, you only will need to open overrideversion.txt in the Relay Server folder and set it to the new client version.</p>
+<p>Note that these steps are only necessary for supporting new client versions. If you have an old version of the game you are fond of, you can stay on it, and play with others in it, if you run both the old Relay Server version and the old game client versions. However you can only go as far back as 15.0, the first Relay Server public release.</p>
+
+</body>
+</html>
