@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="helpPage.css?v=1.0.3">
+<link rel="shortcut icon" href="favicon.png?v=1.0.2" />
+<title>Mega Man X Online: Deathmatch X Armors</title>
+</head>
+
+<style>
+
+.bio {
+  display:inline-block;
+  margin-left:100px;
+  vertical-align:top;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #666677;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  margin-top: 0px;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #9999EE;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #9999EE;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+button img {
+  margin-top: -5px;
+}
+
+</style>
+
+<body class="container">
+
+<div id="logo-wrapper">
+  <a href="index.html"><img id="logo" src="logo.png?v=1.0.2" /></a>
+</div>
+
+<div style="text-align: center">
+  <button onclick="location.href='help.html'" type="button" style="display:inline-block;">Help Guide</button>
+  <button onclick="location.href='characters.html'" type="button" style="display:inline-block;">Characters</button>
+  <button onclick="location.href='changelog.html'" type="button" style="display:inline-block;">Change Log</button>
+  <button onclick="location.href='tools.html'" type="button" style="display:inline-block;">Tools</button>
+  <button onclick="location.href='bonuses.html'" type="button" style="display:inline-block;">Bonuses</button>
+  <button onclick="location.href='credits.html'" type="button" style="display:inline-block;">Credits</button>
+</div>
+
+<br>
+
+<div class="tab">
+  <button class="tablinks active" onclick="openChar(event, 'X1')">
+    X1 Armors
+  </button>
+  <button class="tablinks" onclick="openChar(event, 'X2')">
+    X2 Armors
+  </button>
+    <button class="tablinks" onclick="openChar(event, 'X3')">
+    X3 Armors
+  </button>
+</div>
+
+<div id="X1" class="tabcontent" style="display:block">
+
+<h2>X1 (Light) Armor Overview</h2>
+
+<p>Overall, the Light Armor is a great armor set for beginners, as most of its attributes are applied automaticly, with no additional actions or micromanagement required by the player.</p>
+
+<p><b>Head Parts</b></p>
+<ul>
+  <li>Cost: 1 scrap</li>
+  <li>Description: Grants a headbutt attack. If you jump into an enemy from underneath them, you will deal 2 damage + flinch. If you use the up dash from the X3 boots, the damage is doubled.</li>
+  <li>Strategy/Remarks: This upgrade is great for an extra source of damage on airborne enemies. Consider pairing with charged Bubble Splash, Gravity Well, or the up dash from the X3 boots.</li>
+</ul>
+<p><b>Body Parts</b></p>
+<ul>
+  <li>Cost: 3 scrap</li>
+  <li>Description: Reduces damage taken by 1/8. Also reduces flinch time on hit.</li>
+  <li>Strategy/Remarks: The extra longevity translates to less time dying, which means more kills for you and less for others trying to kill you. Consider getting this part first when on a closed map with lots of narrow chokepoints where you are forced to take a lot of hits. It's also great against flinch-heavy characters such as Zero, reducing combo potential and making escape easier.</li>
+</ul>
+<p><b>Arm Parts</b></p>
+<ul>
+  <li>Cost: 4 scrap</li>
+  <li>Description: Doubles the speed at which X charges his weapons.</li>
+  <li>Strategy/Remarks: A great offensive boost to X's weaponry, this allows him to essentially double his charged damage per second, but on the flip side you'll burn through ammo twice as fast, so try not to overuse charged shots. If you can get the timing down and release exactly when X hits full charge, you will be a force to be reckoned with.</li>
+</ul>
+<p><b>Foot Parts</b></p>
+<ul>
+  <li>Cost: 2 scrap</li>
+  <li>Description: Increases X's ground dash speed by 15%.</li>
+  <li>Strategy/Remarks: This upgrade puts X's base dash speed faster than other characters, which allows him to escape from a charging Zero. As such, if there are a lot of Zero's in the match, consider getting this first. It's also more useful on open maps with lots of flat runways like Highway and Factory.</li>
+</ul>
+
+<p><b>Set Bonus: Hadouken</b></p>
+<p>With full light armor upgrades, X can perform the mighty Hadouken technique! To toss it out, use QCF (down + down forward + forward + shoot). It requires full health and X-Buster equipped, but if you manage to hit someone, they will die instantly! However, it has a relatively short range and high startup lag that leaves you open, and it can be reflected by Zero so don't throw it out blindly. This move costs 3 scrap unless X has also purchased all heart tanks and sub tanks, in which case it is free.</p>
+
+</div>
+
+<div id="X2" class="tabcontent">
+
+<h2>X2 (Giga) Armor Overview</h2>
+
+<p>The Giga Armor provides powerful abilities, but do have a learning curve and require good control to use effectively, and thus are best reserved for advanced X players. They tend to be more offensive oriented than the Light Armor which is more defensive in nature.</p>
+
+<p><b>Head Parts</b></p>
+<ul>
+  <li>Cost: 1 scrap</li>
+  <li>Description: Gives X an additional ability, the Scanner, that lets him automatically scan players to see their name and HP for the rest of the match. Additionally, you can an already scanned enemy again with the SPECIAL button to "tag" them and track them via a nav indicator on your HUD.</li>
+  <li>Strategy/Remarks: This upgrade reveals allows you to see enemy names and health. This can be great for identifying threats or stealing kills on weak foes. Tagging the winning player, or a player that is countering you, is also a good bet in FFA modes, so you can seek or avoid them.</li>
+</ul>
+<p><b>Body Parts</b></p>
+<ul>
+  <li>Cost: 3 scrap</li>
+  <li>Description: Grants X an additional weapon, the Giga Crush, a powerful full-screen 12 damage attack that gains ammo as you take damage. Also reduces damage taken by 1/8 (12.5%).</li>
+  <li>Strategy/Remarks: This armor part packs a punch, though the invincibility while using the move can be used for defensive purposes and to take a breather when getting beat down in a crowd. Pair this weapon with stun or snaring moves like Crystal Hunter to ensure foes can't escape the blast, as the move has a large charge-up time. If you'd like, you can configure this move to be activated with DOWN+SPECIAL in X's settings menu for easier activation, but as a tradeoff you lose the ability to switch to the weapon in your hotbar and fill ammo for it with capsules.</li>
+</ul>
+<p><b>Arm Parts</b></p>
+<ul>
+  <li>Cost: 4 scrap</li>
+  <li>Description: Allows X to store an additional charge shot after firing a first one.</li>
+  <li>Strategy/Remarks: An extremely powerful and feared upgrade. Being able to fire two charged shots in one quick burst will net you countless kills. However, once you've fired these two, it'll be a while before you get your next charge shot in, so be sure to back out of the action or finish off enemies with uncharged shots. This arm upgrade also allows for advanced combo based play, such as double Crystal Hunter into Giga Crush, Strike Chain into anything, etc.</li>
+</ul>
+<p><b>Foot Parts</b></p>
+<ul>
+  <li>Cost: 2 scrap</li>
+  <li>Description: Increases X's air dash speed by 15%.</li>
+  <li>Strategy/Remarks: It's similar to the X1 foot parts but applies to air dashes only instead. Therefore it should be used for maps that don't have a lot of flat ground or if there is a lot of anti-ground in the match (Viles in mechs, magnet mines, etc).</li>
+</ul>
+
+<p><b>Set Bonus: Shoryuken</b></p>
+<p>With full Giga Armor upgrades, X can perform the Shoryuken technique, a high-rising, flaming uppercut! Activate with the Dragon Punch motion (forward + down + down forward + shoot). Like with Hadouken, it requires full health and X-buster equipped and it's an instant kill. It's best used against midair enemies or enemies above you as the hitbox is too small to hit enemies on the ground consistently. It can also be used to gain height and reach high spots that X otherwise couldn't have reached. Note that while the flame effect doesn't show underwater, this ability still kills in one hit underwater. This move costs 3 scrap unless X has also purchased all heart tanks and sub tanks, in which case it is free.</p>
+
+</div>
+
+<div id="X3" class="tabcontent">
+
+<h2>X3 (Max) Armor Overview</h2>
+
+<p>The Max Armor is unique among armor sets in that it utilizes a chip system. Once you reach full upgrades, you'll be able to select one additional part to improve even more with an enhancement chip. Chip upgrades do not cost any scrap, and can be changed at any time. However, once you use a chip, you won't be able to use the Golden armor, so evaluate your choices carefully.</p>
+<p>After you have equipped a chip, you can quickly swap chips without having to go to X's armor menu by pressing Neutral SPECIAL for the body chip, UP+SPECIAL for the head chip, DOWN+SPECIAL for the foot chip, and SIDE+SPECIAL for the arm chip. Use this to quickly change chips on the fly depending on which is most appropriate for the situation.</p>
+
+<p><b>Head Parts</b></p>
+<ul>
+  <li>Cost: 1 scrap</li>
+  <li>Description: Gives X a radar in the bottom right of the HUD that reveals the location of nearby enemies and allies on the map.</li>
+  <li>Enhancement Chip: Slowly recharges health over time. If X has not taken damage for 4 seconds, health is recovered at the rate of 1 bar every 2 seconds.</li>
+  <li>Strategy/Remarks: The radar provides invaluable positioning information and is great when used with long range weapons to pick enemies off screen, or when defending as it warns you of incoming assaults. Pick the enhancement chip if the map lacks health pickups or healers, as it'll greatly increase your longevity, but be sure to back out of the action when weak to make the best use of it.</li>
+</ul>
+<p><b>Body Parts</b></p>
+<ul>
+  <li>Cost: 3 scrap</li>
+  <li>Description: When X is hit by any attack, a barrier is generated for a short time that reduces further damage by 25%. Flinching blows generate a longer barrier time.</li>
+  <li>Enhancement Chip: The barrier on flinch is improved even more, reducing damage by 50% while it's active.</li>
+  <li>Strategy/Remarks: The barrier reduces damage by a great deal, though it will only activate after X takes a full-damage hit first. Therefore, it's great for sponging rapid fire attacks and reducing the damage of flinch combos, but less effective against a slow and stready stream of powerful attacks which can bypass the flinch barrier completely if shots are timed after the barrier wears off.</li>
+</ul>
+<p><b>Arm Parts</b></p>
+<ul>
+  <li>Cost: 4 scrap</li>
+  <li>Description: Turns the fully charged X-Buster into the Cross Shot, a powerful two-part attack. The first part deals 4 damage and the second part deals 4 damage if all balls hit (1 damage per ball). Also grants the Hyper Charge weapon, which can instantly fire fully charged shots of whatever weapon X has equipped in slot 1, as long as it has ammo. Each Hyper Charge shot consumes 25% of the ammo bar and there is a two-second delay after a prevous charge shot before another one can be shot.</li>
+  <li>Enhancement Chip: Reduces ammo usage by half.</li>
+  <li>Strategy/Remarks: This arm part allows X to "bank" charged shots and immediately fire them off when he has enough ammo. If you have enough ammo for two or more shots, try to switch weapons during the cooldown so you can keep up the damage output with uncharged shots from your other weapons. Bear in mind though that like with Giga Crush, the Hyper Charge starts off with no ammo and only gains ammo as X takes damage or picks up blue capsules. The chip reduces all ammo usage by half (including Hyper Charge, which greatly benefits from it) so pair it with ammo-heavy weapons, such as Chameleon Sting, Rolling Shield, Tunnel Fang, etc.</li>
+</ul>
+<p><b>Foot Parts</b></p>
+<ul>
+  <li>Cost: 2 scrap</li>
+  <li>Description: Gives X an upward air dash.</li>
+  <li>Enhancement Chip: Gives X two upward air dashes.</li>
+  <li>Strategy/Remarks: This upgrade lets X evade enemies on the ground more easily as well as reach high spots that otherwise could only be reached by the other characters. Pair it with weapons that can strike downwards, such as Storm Tornado, Spin Wheel, Rolling Shield, etc. It's also great against Vile since he has trouble hitting foes above him, but watch out for Zero's uppercut moves!</li>
+</ul>
+
+<p><b>Set Bonus: Gold Armor/Beam Saber</b></p>
+<p>With full Max Armor upgrades, X can don the Gold Armor at the cost of 5 scrap! To activate, press the special button in the X3 armor menu. This armor grants <i>all</i> chip parts to X, as well as giving him the X3 Beam Saber attack (note: this is different from the X6-style saber in X's special button loadout slot), which can be executed by charging up the buster all the way, and then firing again after the buster shot. The saber deals significant damage and also sends out a cresent shaped projectile. The Gold Armor lasts until X dies.</p>
+
+</div>
+
+
+<script>
+function openChar(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('game');
+
+if (myParam == "x1") {
+  openChar({currentTarget:document.getElementById("X1")}, "X1")
+}
+if (myParam == "x2") {
+  openChar({currentTarget:document.getElementById("X2")}, "X2")
+}
+if (myParam == "x3") {
+  openChar({currentTarget:document.getElementById("X3")}, "X3")
+}
+
+</script>
+
+
+</body>
+</html>
